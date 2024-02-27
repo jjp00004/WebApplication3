@@ -1,0 +1,41 @@
+﻿@model Car
+
+<h1>Update Vehicle</h1>
+
+<div class=" border col-md-10">
+    <form asp-action="Update">
+
+        <div class="form-group m-4">
+            <label asp-for="VIN" class="control-label"></label>
+            <input asp-for="VIN" class="form-control" />
+        </div>
+
+        <div class="form-group m-4">
+            <label asp-for="LicensePlate" class="control-label"></label>
+            <input asp-for="LicensePlate" class="form-control" />
+        </div>
+
+        <div class="form-group m-4">
+            <label asp-for="Make" class="control-label"></label>
+            <input asp-for="Make" class="form-control" />
+        </div>
+
+        <div class="form-group m-4">
+            <label asp-for="Model" class="control-label"></label>
+            <input asp-for="Model" class="form-control" />
+        </div>
+        <div class="form-group m-4">
+            <label asp-for="Mileage" class="control-label"></label>
+            <input asp-for="Mileage" class="form-control" />
+        </div>
+        <div class="form-group m-4">
+            <label asp-for="OfficerID" class="control-label"></label>
+            <input asp-for="OfficerID" class="form-control" />
+        </div>
+
+        <div class="form-group m-4">
+            <input type="Submit" value="Save Changes" class="form-control btn btn-primary" />
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,44 @@
+﻿@model List<Car>
+
+<h1> Service request List </h1>
+
+
+<div class="pt-2 pb-2">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>VIN</th>
+                <th>License Plate</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Mileage</th>
+                <th>Officer</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var eachCar in Model)
+            {
+                <tr>
+                    <td>@eachCar.VIN</td>
+                    <td>@eachCar.LicensePlate</td>
+                    <td>@eachCar.Make</td>
+                    <td>@eachCar.Model</td>
+                    <td>@eachCar.Mileage</td>
+                    <td>@eachCar.OfficerID</td>
+                    <td>
+                        <a asp-controller="Car" asp-action="Update" asp-route-id="@eachCar.VIN">Edit</a>
+                        <a asp-controller="Car" asp-action="Delete" asp-route-id="@eachCar.VIN">Edit</a>
+                        <a asp-controller="Car" asp-action="Details" asp-route-id="@eachCar.VIN">Edit</a>
+                    </td>
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+
+</div>
+
+
+
